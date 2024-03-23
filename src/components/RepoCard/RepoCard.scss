@@ -1,0 +1,133 @@
+.repo-card {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    height: 218px;
+    border: 1px solid black;
+
+    p {
+        margin: 0;
+        font-weight: 400;
+        font-family: Roboto;
+        cursor: default;
+        text-overflow: ellipsis;
+        word-wrap: normal;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 100%;
+
+    }
+
+    &>p {
+        cursor: pointer;
+        font-size: 20px;
+        width: fit-content;
+       
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .user {
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 18px;
+
+        &>img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+
+        &>p {
+            margin-left: 25px;
+            font-size: 18px;
+        }
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 14px;
+
+        &>span {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            &>p {
+                font-size: 14px;
+                margin-left: 20px;
+            }
+
+            &:last-of-type {
+                margin-left: 40px;
+            }
+        }
+    }
+
+    .edit {
+        margin-top: 15px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &>input {
+            width: 100%;
+            padding: 7px;
+            font-weight: 400;
+            font-size: 18px;
+            font-family: Roboto;
+            border-radius: 0;
+            border: 1px solid black;
+            border-right: none !important;
+
+            &:active,
+            &:focus,
+            &:focus-visible,
+            &:focus-within {
+                border-radius: 0 !important;
+                border: 1px solid black;
+                border-right: none !important;
+                outline: none !important;
+                // border: 2px solid black !important;
+                // inset: 1px solid black !important;
+            }
+        }
+
+        &>button {
+            background-color: #00A3FF;
+            padding: 0;
+            outline: none !important;
+            border: none;
+            height: 100%;
+            padding: 0 10px;
+        }
+    }
+}
+
+@media (max-width: 899.98px) { 
+    .repo-card {
+        max-width: calc(50% - 2rem);
+        flex: 1 1 calc((100% / 2) - 2rem);
+    }
+ }
+
+@media (min-width: 900px) and (max-width: 1199.98px) { 
+    .repo-card {
+        max-width: calc(33.3333333333% - 2rem);
+        flex: 1 1 calc((100% / 3) - 2rem);
+    }
+ }
+
+ @media (min-width: 1200px) { 
+    .repo-card {
+        max-width: calc(25% - 2rem);
+        flex: 1 1 calc((100% / 4) - 2rem);
+    }
+ }

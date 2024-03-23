@@ -1,0 +1,24 @@
+.repo-card-listing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0 1rem;
+    margin-top: 34px;
+    height: 100%;
+    justify-content: center;
+    overflow-x: hidden;
+    padding-bottom: 34px;
+
+    &>h1 {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.repo-card-listing-wrap{
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
